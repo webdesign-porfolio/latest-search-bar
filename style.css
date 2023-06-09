@@ -1,0 +1,628 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body
+{
+   
+    color: #333;
+    max-width: 100vw;
+    font-family: poppins;
+    position: relative;
+   
+}
+
+
+/* header */
+
+header{
+    background-color: red;
+    color: black;
+    max-width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.CTULOGO
+{
+    width: 150px;
+    z-index: 1;
+}
+
+header .header-bg{
+    
+    width: 100%;
+    position: absolute; 
+}
+
+/* suggestion List  */
+.result-box ul
+{   
+
+    border-top: 1px solid #999;
+    padding: 15px 10px;
+    position: aboslute;
+    width: 100%;
+}
+
+.result-box ul li
+{
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+.result-box ul li:hover
+{
+    background: #e9f3ff;
+}
+
+.result-box
+{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+/* Search.box header */
+.Search-bar
+{
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    
+}
+
+.Search-bar h1
+{
+    background: linear-gradient(90deg, #dffffd, #dffffd, #dffffd, #fff8ae, #dffffd,#dffffd );
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite;
+    font-size: 60px;
+    color: #fff;
+}
+
+@keyframes animate {
+    0% { background-position: 0%}
+    100% { background-position: 400%}
+  }
+
+.Search-bar p{
+    color: white;
+}
+
+.Search-bar :nth-child(3){
+    font-style: italic;
+}
+
+
+
+/* search box */
+
+.search-box
+{
+    max-width: 600px;
+    background-color: #fff;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+.row
+{
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+input
+{
+    flex: 1;
+    height: 40px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 17px;
+    color: #333;
+}
+
+button
+{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}button .fa-solid
+{
+    width: 25px;
+    color: #555;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+::placeholder
+{
+    color: #555;
+}
+
+/* Search container */
+
+.seachBar-Container{
+
+    background-image: linear-gradient(rgba(0,8,51,0.8),rgba(0,8,51,0.8)), url(body-bg.jpg);
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+/* navigation */
+
+.navigation{
+    max-width: 100%;
+    background: rgb(5, 16, 73);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid black;
+
+}
+
+/* for Drop down */
+
+.navigation img{
+    
+    position: absolute;
+    opacity: 0;
+    width: 25px;
+    aspect-ratio: 1;
+}
+
+.list{
+  
+    list-style: none;
+}
+.list li{
+    display: inline-block;
+}
+
+.list li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: 300ms;
+}
+
+.list li a:visited{
+    color: white;
+}
+
+.list li a:hover{
+    color: orange;
+    background-color:rgb(78, 34, 34);
+    border-radius: 30px;
+}
+
+
+
+/* classlist - section */
+
+
+
+
+/*Footer*/
+
+footer{
+background: #140B5C;
+max-width: 100%;
+min-height: 200px;
+color: white;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-gap: 2rem;
+padding: 70px;
+
+}
+
+div > h3{
+    padding: 0 0 10px 0;
+}
+
+div > p{
+    opacity: .5;
+
+}
+
+div > h3::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: white;
+}
+
+.quick-links a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: 250ms;
+    font-size: 14px;
+    opacity: .5;
+    line-height: 2;
+
+}
+
+.quick-links a:hover{
+    text-decoration: underline;
+}
+
+
+.credits a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: 250ms;
+    font-size: 14px;
+    opacity: .5;
+    line-height: 2;
+}
+
+.credits a:hover{
+    text-decoration: underline;
+}
+
+.last-section{
+  
+    background: rgb(5, 16, 73);
+    color: white;
+    display: flex;
+    gap: 2rem;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/* dropdown */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 350ms;
+    font-family: poppins;
+    
+  }
+  
+ 
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: white;
+    color: rgb(5, 16, 73);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0p;
+
+  }
+  
+  .dropdown {
+ 
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 100%;
+    width: 100vw;
+    height: 350px;
+    left: 0;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: rgb(5, 16, 73);
+    padding: 10px 50px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    transition: 250ms;
+    text-align: center;
+    cursor: default;
+
+  }
+  
+  .dropdown a:hover {
+    background-color: rgb(5, 16, 73);
+    color: white;
+}
+  
+  .show {
+    display: grid;
+    
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .search-box
+{
+    max-width: 450px;
+    margin: 200px auto 0;
+}
+.Search-bar
+{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: -25%;
+    padding-top: 50%;
+}
+.title
+{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: -50%;
+    padding-top: 50%;
+    margin-left: 220px;
+}
+  }
+
+@media only screen and (max-width: 450px) {
+    body {
+      background-color: #1A120B;
+    }
+
+   .search-box
+{
+    width: 300px;
+    margin: 200px auto 0;
+} 
+
+.Search-bar
+{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: -35%;
+    padding-top: 50%;
+}
+.title
+{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: -50%;
+    padding-top: 50%;
+    margin-left: 220px;
+}
+}
+
+
+
+@media (max-width: 428px){
+    header{
+        text-align: center;
+
+    }
+
+    header h1{
+        font-size: 30px;
+        position: absolute;
+        top: 150px;
+    }
+
+    .header-bg{
+        all: unset;
+        max-width: 100%;
+        aspect-ratio: 1;
+        position: absolute;
+         
+    }
+
+    .navigation{
+        position: relative;
+    }
+
+    .list{
+        height: 100px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -250px;
+        top: 50px;
+        z-index: 9999 !important;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        box-shadow: -2px ;
+        background-color: rgb(5, 16, 73);
+        transition: 350ms;
+        box-shadow: 2px 2px 30px rgba(0,0,0,0.5)
+    
+    }
+
+    .list li{
+        display: block;
+        padding: 30px 20px;
+       
+    }
+
+    .navigation img{
+
+        position: absolute;
+        object-position: center;
+        top: 10px;
+        right: 30px;
+        aspect-ratio: 1;
+        opacity: 1;
+        filter: contrast(0%) brightness(200%);
+    }
+
+  
+    .Search-bar{
+        
+       padding-top: 60px;
+        z-index: 1;
+    }
+
+    .Search-bar h1{
+        font-size: 30px;
+        margin-inline: 1vw;
+      
+    }
+
+    .search-box{
+        margin-top: 150px;
+    }
+
+    .Search-bar p{
+        font-size: 12px;
+        padding: 0 15px;
+    }
+
+    .seachBar-Container{
+        background-size: cover;
+    }
+
+    .CTULOGO{
+        width: 100px;
+    }
+    
+    header{
+        height: 150px;
+    }
+    
+    
+    .dropbtn{
+        padding-top: 20px;
+        position: relative;
+        left: 0;
+        top: 20px;
+    }
+
+    .dropdown-content{
+        overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        height: 450px;
+        width: 200px;
+    }
+
+    .dropdown-content a{
+        padding: 10px;
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .last-section{
+        font-size: 12px;
+    }
+
+
+  
+}
+
+
+/* Media 400 */
+
+@media (max-width: 400px){
+    .logo{
+        font-size: 14px;
+    }
+
+  
+}
+
+/* Media 360 */
+
+@media (max-width: 360px){
+    .logo{
+        font-size: 12px;
+    }
+
+   
+}

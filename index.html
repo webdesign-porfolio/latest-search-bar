@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Searchbar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="style.css">
+         <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+
+
+    <body>
+
+        <header>
+              
+                <img class="CTULOGO" src="CTU-LOGO.png">
+                <img class="header-bg" src="header.jpg" alt="">
+               
+        </header>
+
+        <div class="navigation">
+            <span class="logo">&#x2770;/ &#x2771;BSGD 3A DAY Website Directory</span>
+
+            <ul class="list" id="menu-list">
+              
+               <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Class list</button>
+                
+
+                <div id="myDropdown" class="dropdown-content">
+                 
+                  <a href="#">Acaylar, Joybelle</a>
+                  <a href="#">Alquilos, Graeme<br> Dayle</a>
+                  <a href="#">Ambrad, Sheena</a>
+                  <a href="#">Angana, Arche</a>
+                  <a href="#">Arbon, Trecemier</a>
+                  <a href="#">Baguio, Christine<br>Jane</a>
+                  <a href="#">Baguio, Diether </a>
+                  <a href="#">Baguio, Monique </a>
+                  <a href="#">Berdin, Mark Edison</a>
+                  <a href="#">Brazil, Ma. Christina</a>
+                  <a href="#">Celis, Mave Jade</a>
+                  <a href="#">Escalicas, Kristell </a>
+                  <a href="#">Flores, Gian Onel </a>
+                  <a href="#">Gavas, John Oriel </a>
+                  <a href="#">Genon, Shaveh <br>Leozel </a>
+                  <a href="#">Gutang, Jeraldine</a>
+                  <a href="#">Herbito, Karyll</a>
+                  <a href="#">Lagura, Mary <br>Princess</a>
+                  <a href="#">Maca-ayong, Jobarh</a>
+                  <a href="#">Minoza, Wella Marie</a>
+                  <a href="#">Nator, Ailes</a>
+                  <a href="#">Pilapil, Romy Jay</a>
+                  <a href="#">Pogoy, Kheira Melore</a>
+                  <a href="#">Quibilan, Kelly</a>
+                  <a href="#">Rada, Jishia Cohlyn</a>
+                  <a href="#">Ycong, Justine Claire</a>
+                  
+                </div>
+              </div>
+                
+            </ul>  
+            <img id="menu" src="menu.png" alt="" onclick="dropdown()">
+            
+            
+        </div>
+
+
+<!-- Script for classlist-->
+<script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  
+</script>
+
+  <!-- Script for Navigation mobile -->
+  <script>
+
+      var menu = document.getElementById('menu');
+      var menulist = document.getElementById('menu-list');
+      
+
+     function dropdown(){
+
+        if(menulist.style.right == "-250px"){
+          menulist.style.right = "0";
+       
+         
+
+        }else{
+          menulist.style.right = "-250px";
+         
+        }
+      }
+
+        
+      
+     
+  </script>
+
+
+
+
+<!-- Search engine wrapper -->      
+<div class="seachBar-Container">
+
+    <div class="Search-bar">
+      <p> Welcome to the </p>
+        <h1>BSGD 3-A Website Directory</h1>
+        <p>Enter a student's name below to select and view their personal website</p>
+     </div>
+
+     <div class="search-box"> 
+
+         <div class="row">
+
+             <input type="text" id="input-box" placeholder="Search..." autocomplete="off">
+
+
+             <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            
+         </div>
+         <div class="result-box"></div>
+
+     </div>
+        </div>
+
+<!-- Footer -->
+    <footer>
+
+ 
+
+        <div class="about-us">
+          <h3>About Us</h3>
+          <p>This website developed and designed by BSGD 3A students for final requirements in fulfullment of the subject Web design (GD3214).</p>
+        </div>
+
+        <div class="quick-links">
+          <h3>Quick links</h3>
+          <a href="https://www.ctu.edu.ph" target="_blank">Visit CTU Web page</a>
+          <a href="https://www.facebook.com/ctu.premier" target="_blank" >CTU FB page</a>
+        </div>
+
+        <div class="credits">
+          <h3>Credits</h3>
+          <a href="https://www.facebook.com/AnganaArche" target="_blank" >Arche Angana</a>
+          <a href="https://www.facebook.com/bellato448" target="_blank" >Jobarh Maca-ayong</a>
+          <a href="https://www.facebook.com/gdayle.alquilos" target="_blank" >Graeme Dayle Alquilos</a>
+        </div>
+
+        <div class="footer_CTU">
+          <h1>CEBU TECHNOLOGICAL UNIVERSITY</h1>
+        </div>
+ 
+    </footer>
+
+    <div class="last-section">
+      <p>&copy; 2023 BSGD 3A. All rights reserved</p>
+      <p>Batch 2023</p>
+    </div>
+
+
+<!-- Main JS -->
+   <script>
+
+        let availableKeywords = [
+  'Acaylar, Joybelle P.',
+  'Alquilos, Graeme Dayle L.',
+  'Ambrad, Sheena Ann M.',
+  'Angana, Arche M.',
+  'Arbon, Trecemier G. Jr.',
+  'Baguio, Christine Jane',
+  'Baguio, Diether A.',
+  'Baguio, Monique D.',
+  'Berdin, Mark Edison T.',
+  'Brazil, Ma. Christina C.',
+  'Celis, Mave Jade R.',
+  'Escalicas, Kristell T',
+  'Flores, Gian Onel D.',
+  'Gavas, John Oriel V.',
+  'Genon, Shaveh Leozel V.',
+  'Gutang, Jeraldine B.',
+  'Herbito, Karyll R.',
+  'Lagura, Mary Princess',
+  'Maca-ayong, Jobarh M.',
+  'Minoza, Wella Marie C.',
+  'Nadela, Neiah Carmela M.',
+  'Nator, Ailes B',
+  'Pilapil, Romy Jay C.',
+  'Pogoy, Kheira Melore T.',
+  'Quibilan, Kelly L.',
+  'Rada, Jishia Cohlyn',
+  'Ycong, Justine Claire V.',
+];
+
+let keywordUrls = {
+  'Acaylar, Joybelle P.': 'https://joybsacays.github.io/joybellephotography/index.html?fbclid=IwAR1l--TCBQ9R8280em-9B1vSGCzCq3n1efGl76trnWrTY5q68MO8fDgfjlk',
+  'Alquilos, Graeme Dayle L.': 'https://gdayle.github.io/grimmdle/?fbclid=IwAR1k38rKbNkZ4aohhaJttDhNiQ4_tzatvTVNUOg1jPkGqEqreN8oMp-chpA',
+  'Ambrad, Sheena Ann M.': 'https://sambrad123.github.io/BSGD3A-FINAL/?fbclid=IwAR36AMOqxt_bJYYHo6Izdh9U22UeB0nS8vUtqRPfH9iqS9LJuuE5fmrJPPc',
+  'Angana, Arche M.':'https://example.com/angana',
+  'Arbon, Trecemier G. Jr.':'https://trecemier.github.io/trek/index.html?fbclid=IwAR0_UycJedQtGSyYZUutJ7jI9Feypk2atH0Mus-AOU1f6CTlReT71RM1g9Q',
+  'Baguio, Christine Jane':'https://christineyjaney.github.io/Memorabilia/?fbclid=IwAR1KHqMnxR1i0Dc2PDAIPEuISAuNh1n9AzAVngD03AoqJdh_Ue0NBATMrCM',
+  'Baguio, Diether A.':'https://dter00.github.io/dter/?fbclid=IwAR3SWv_X3HsSwlyzXji4y7NvBu1EDb-TVINDQwwXgiBAd668e9KqNKDaRUk',
+  'Baguio, Monique D.':'https://qquee.github.io/Que/?fbclid=IwAR3QyKtMlzk0wTw_A91G-F69cczvDFmCsNLznHjKwB2Pi64qK5bUj3Rj0QI',
+  'Berdin, Mark Edison T.':'https://mberdin13.github.io/berdinmarkedison/?fbclid=IwAR2keUybtiGva5pb7J29xVTwCMBe0u9QdrC_7VDgGjZtZBINbOgJPPJ3aWg',
+  'Brazil, Ma. Christina C.':'https://brazil07.github.io/BSGD3A-FINAL/?fbclid=IwAR0eJMu2GYhBRi11FQ396lGvP3mC07taDZ2NncEiMusgAQKVGpmnjVD3RqU#',
+  'Celis, Mave Jade R.':'https://mavecelis.github.io/BSGD3AFinalsPortfolio/?fbclid=IwAR14GHyVXJTSIEy-M2g3iNIySD2eY_AILBq_QdtqxFpj_3DSxZfw0CqaDxI',
+  'Escalicas, Kristell T':'https://ystell07.github.io/Kristell/?fbclid=IwAR2s2wlJGRahVA5m10Yq9yUQQttXa2PvTOY9--vbivZx0Ho4JmGdX489MdU',
+  'Flores, Gian Onel D.':'https://gitgian.github.io/Web/?fbclid=IwAR3Z0bc1kwCEqbeGB7z10lBRI5pj605c-41emWHA67-pL8ntb75cHWNjI6M',
+  'Gavas, John Oriel V.':'https://cream0z.github.io/Fudgebar/?fbclid=IwAR3I-7ksCXI6SZ7BE2lHR7-g8FFlzxy7PlXQc7Kt49-o5psB-T0VYFzJsxw',
+  'Genon, Shaveh Leozel V.':'https://yyfanq.github.io/S.G/?fbclid=IwAR0vAPI3XHhFG1nf4xLW6tUvWYEOX-fAh3T7m0Wqe7PPQcirVbNXDwE2yEw',
+  'Gutang, Jeraldine B.':'https://not-jerrrr.github.io/jeraldine/',
+  'Herbito, Karyll R.':'https://karyllherbito.github.io/KlizeStudioPH/?fbclid=IwAR0rGuHknBEX-NAWrm29Q11q8oLXgOk2FbX-UrjYn03JV1GWW_NrA3QXXyM',
+  'Lagura, Mary Princess':'https://maryyprincesss.github.io/maryprincesslagura/?fbclid=IwAR2Ob72A2bQ2yy6yprpExcJsuuBwlPjeKkM2Y0dIQSqVwz_UjaD-2WcimJE',
+  'Maca-ayong, Jobarh M.':'https://portfolio-webdesign.github.io/JABZ/',
+  'Minoza, Wella Marie C.':'https://0h-well.github.io/well/?fbclid=IwAR1fG_bvGhQ2lDf45vD6dTMGxbqWKDV6mtaJo904JK55ofHGFxTXNNRzT_Y',
+  'Nadela, Neiah Carmela M.':'https://neiyaaang.github.io/Moon-Fashion-Line/?fbclid=IwAR3kE8dm0tKOwejXtCI29jPPVrYeIM4NEF-fVERtvlUa42oFkYOrZNV8kEQ',
+  'Nator, Ailes B':'https://ailovee00.github.io/Ai-Nator/?fbclid=IwAR21Q-_fdLFJz-bVaElpJ6s6nt4ppzQFkvu3iDPYXS2R0wVacnQI4TfwRRw',
+  'Pilapil, Romy Jay C.':'https://arlequint.github.io/PILAPIL-BSGD-3-A/?fbclid=IwAR2keUybtiGva5pb7J29xVTwCMBe0u9QdrC_7VDgGjZtZBINbOgJPPJ3aWg',
+  'Pogoy, Kheira Melore T.':'https://keiranyan.github.io/keiranyan/?fbclid=IwAR2Vipkxt2mzj0UR-BgmPr-YnKoETzem2rFTE1Rb9pVKUTzCDS6keIWQUoM',
+  'Quibilan, Kelly L.':'https://klylara.github.io/kly5/?fbclid=IwAR0TRS2UWcUtk8MOaMiJ1UzKeVPOJKd6OOBtyeDww7pf20r96AgpDs7kjKQ',
+  'Rada, Jishia Cohlyn':'https://jcohlyn.github.io/cohstudio/?fbclid=IwAR1U2KKyJxXhmkvw2fBP3b5Ju05tm4jtaisj1NOoMGK6s4hh64nzu3ZfYT0',
+  'Ycong, Justine Claire V.':'https://yjustine.github.io/personalwebsite/?fbclid=IwAR0TRS2UWcUtk8MOaMiJ1UzKeVPOJKd6OOBtyeDww7pf20r96AgpDs7kjKQ#1',
+};
+
+const resultBox = document.querySelector(".result-box");
+const inputBox = document.getElementById("input-box");
+
+inputBox.onkeyup = function() {
+  let result = [];
+  let input = inputBox.value;
+
+  if (input.length) {
+    result = availableKeywords.filter((keyword) => {
+      return keyword.toLowerCase().includes(input.toLowerCase());
+    });
+    console.log(result);
+  }
+  display(result);
+
+  if (!result.length) {
+    resultBox.innerHTML = '';
+  }
+};
+
+function display(result) {
+  const content = result.map((list) => {
+    return "<li onclick=selectInput(this)>" + list + "</li>";
+  });
+
+  resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+
+function selectInput(list) {
+  const keyword = list.innerHTML;
+  inputBox.value = keyword;
+  resultBox.innerHTML = '';
+
+  if (keywordUrls.hasOwnProperty(keyword)) {
+    const url = keywordUrls[keyword];
+    window.open(url, "_blank");
+  }
+}
+
+
+
+//scroll reveal
+// scroller reveal 
+animateElement = (element,origin,delay) => {
+    // Initialize ScrollReveal with options
+    const sr = ScrollReveal({
+        delay: delay,
+        distance: '100px',
+        duration: 1000,
+        easing: 'ease',
+        origin: origin
+    });
+  
+    // Reveal the element
+    sr.reveal(element);
+}
+
+// animate element 
+animateElement(".header","bottom",500);
+animateElement(".search-box","bottom",500);
+
+   </script>
+
+
+    </body>
+</html>
